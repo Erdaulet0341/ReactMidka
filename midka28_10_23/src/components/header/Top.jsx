@@ -25,7 +25,7 @@ export default Top;
 function Search() {
   return (
     <form className={s.search_box}>
-      <input type="text" placeholder="Search ..."/>
+      <input type="text" placeholder="Search ..." />
       <button type="reset"></button>
     </form>
   );

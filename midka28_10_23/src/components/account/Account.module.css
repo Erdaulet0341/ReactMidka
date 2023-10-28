@@ -1,12 +1,12 @@
-.main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: #3f6ff3 2px solid;
-    margin-top: 90px;
-    margin-bottom: 90px;
-    border-radius: 20px;
-    padding: 20px;
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #3f6ff3 2px solid;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .container form {
@@ -20,9 +20,10 @@
   flex-direction: column;
   width: 28vw;
 }
-.container p, h1 {
-    text-align: center;
-  }
+.container p,
+h1 {
+  text-align: center;
+}
 
 .already p {
   text-align: center;
@@ -54,11 +55,11 @@
   background-color: #5b83f0;
 }
 
-.link{
+.link {
   text-decoration: none;
   color: #4c97f9;
 }
 
-.link:hover{
+.link:hover {
   color: #004093;
 }

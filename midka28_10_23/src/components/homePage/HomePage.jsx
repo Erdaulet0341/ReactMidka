@@ -2,13 +2,9 @@ import React, { useEffect, useState } from "react";
 import s from "./HomePage.module.css";
 import { Link } from "react-router-dom";
 
-export default function Categories() {
+export default function HomePage() {
   const [posts, setposts] = useState([]);
   const [input, setInput] = useState([]);
-
-  const handl = (event) => {
-    setInput(event.target.value);
-  };
 
   const fetchData = () => {
     fetch("http://0.0.0.0:4000/api/posts/")

@@ -8,7 +8,6 @@ const Registration = (props) => {
   const navigate = useNavigate();
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-
   if (type === "Client") type = "/login-client";
   else type = "/login-seller";
 
@@ -17,7 +16,6 @@ const Registration = (props) => {
     email: "",
     city: "",
   });
-  
 
   const [passwordValue, setPasswordValue] = useState("");
   const passwordChange = (e) => {
@@ -39,16 +37,13 @@ const Registration = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if(passwordValue.length <6){
-    //   toast.error("Password must be more than 5 character", { autoClose: 2500 });
-    }
-    else if (passwordValue !== rpasswordValue) {
-    //   toast.error("Passwords must be same", { autoClose: 2500 });
-    }
-    else if(!emailRegex.test(formData.email)){
-    //   toast.error("Enter valid email address", { autoClose: 2500 });
-    } 
-    else {
+    if (passwordValue.length < 6) {
+      //   toast.error("Password must be more than 5 character", { autoClose: 2500 });
+    } else if (passwordValue !== rpasswordValue) {
+      //   toast.error("Passwords must be same", { autoClose: 2500 });
+    } else if (!emailRegex.test(formData.email)) {
+      //   toast.error("Enter valid email address", { autoClose: 2500 });
+    } else {
       const newUser = {
         username: formData.username,
         email: formData.email,
@@ -65,7 +60,7 @@ const Registration = (props) => {
       })
         .then((response) => response.json())
         .then(() => {
-        //   toast.success("Your are logined successfully", { autoClose: 2500 });
+          //   toast.success("Your are logined successfully", { autoClose: 2500 });
           navigate("/login-client");
         })
         .catch((error) => {
